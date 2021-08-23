@@ -1,0 +1,42 @@
+sampleDict = { 
+   "class":{ 
+      "student":{ 
+         "name":"Mike",
+         "marks":{ 
+            "physics":70,
+            "history":80
+         }
+      }
+   }
+}
+------------------------------------
+#To Access the KEY for "history"
+------------------------------------
+sampleDict['class']['student']['marks']['history']
+
+----------------------------------------
+#To Change the KEY value of 'history
+---------------------------------------
+sampleDict['class']['student']['marks']['history'] = 'fail'
+
+---------------------------------------
+#To delete the KEY for history
+-------------------------------------
+del sampleDict['class']['student']['marks']['history'] 
+print(sampleDict)
+
+--------------------------
+#Removing Mutiple Keys
+-------------------------
+sampleDict2 = {
+  "name": "Kelly",
+  "age":25,
+  "salary": 8000,
+  "city": "New york"
+}
+
+keysToRemove = ["name", "salary"]
+for key in keysToRemove:
+    del sampleDict2[key]
+print(sampleDict2)
+

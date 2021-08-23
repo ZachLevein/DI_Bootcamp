@@ -1,0 +1,10 @@
+{% extends 'base.html'%} {% load static %} {% block style%}
+<link rel='stylesheet' href='{%static "css/index.css" %}'> {% endblock %} {% block content%}
+<h4>Vehicles</h4>
+{% for vehicle in vehicles %}
+<img src="{{gif.url_link}}">
+<ul>
+    <li>Model: {{vehicle.vehicle_type}}</li>
+    <li>Type: {{vehicle.size}}</li>
+</ul>
+{% endfor %} {% endblock %}

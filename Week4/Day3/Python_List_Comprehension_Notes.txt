@@ -1,0 +1,42 @@
+# |||||||||||||||||||||||||||||||||||||||||||||||||
+# | List Comprehension: Quick of Creating A List  |
+# |||||||||||||||||||||||||||||||||||||||||||||||||
+
+#The standard basic way
+-----------------------
+my_number = '1234'
+my_list = []
+
+for num in my_number:
+    my_list.append(num)
+print(my_list)
+
+#List Comprehesion:
+----------------------
+my_number = '1234'
+my_list = []
+
+my_list = [num for num in my_number]
+print(my_list)
+
+#Example with RANGE method
+-------------------------------
+my_list = [x for x in range(0,6)]
+print(my_list)
+
+
+#Basic Way Of Appending An Element Into A List With Nested Loop
+--------------------------------------------------------------
+my_list = []
+
+for i in [2, 3, 4]:
+    for j in [100, 200, 300]:
+        my_list.append(i*j)
+
+print(my_list)
+
+#List Comprehension:
+--------------------------------
+my_list = []
+my_list = [(i*j) for i in [2, 3, 4] for j in [100, 200, 300]]
+print(my_list)

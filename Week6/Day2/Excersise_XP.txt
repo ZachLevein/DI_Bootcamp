@@ -1,0 +1,1 @@
+SELECT * FROM items WHERE item_price BETWEEN 0 AND 1000;

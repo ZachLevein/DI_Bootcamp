@@ -1,0 +1,11 @@
+{% extends 'base.html'%} {% load static %} {% block style%}
+<link rel='stylesheet' href='{%static "css/index.css" %}'> {% endblock %} {% block content%}
+<h4>Gifs</h4>
+{% for gif in gifs %}
+<img src="{{gif.url_link}}">
+<ul>
+    <li>Title: {{gif.title}}</li>
+    <li>Uploaded By: {{gif.uploader_name}}</li>
+    <li>Category: {{gif.Category}}</li>
+</ul>
+{% endfor %} {% endblock %}

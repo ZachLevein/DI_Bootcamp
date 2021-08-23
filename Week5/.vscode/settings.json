@@ -1,0 +1,4 @@
+{
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "terminal.integrated.allowMnemonics": true
+}
