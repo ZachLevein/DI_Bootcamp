@@ -1,4 +1,21 @@
 {% extends 'base.html'%} {% block title%} {% endblock%} {% block content %}
 <h2>This is the homepage</h2>
 
+<div class='row'>
+
+
+    {% for film in films%}
+    <div class="card" style="">
+        <div class="card-body">
+            <h5 class="card-title">{{film.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{film.release_date}}</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="{% url 'film_detail' film.pk %}" class="card-link btn btn-primary">View</a>
+
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
 {% endblock %}

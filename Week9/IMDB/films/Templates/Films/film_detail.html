@@ -1,22 +1,20 @@
-{% extends 'base.html'%} {% block title%} Film- {{film.title}} {% endblock%} {% block content %}
+{% extends 'base.html'%} {% block title%} Film- {{object.title}} {% endblock%} {% block content %}
 <h2>This is the filmlist</h2>
 
 <div class='row'>
 
 
     <ul class="list-group">
-        <li class="list-group-item">Name: {{object.title}}</li>
-        <li class="list-group-item">Release Date: {{object.release_date}}</li>
+        <li class="list-group-item">Name: {{film.title}}</li>
+        <li class="list-group-item">Release Date: {{film.release_date}}</li>
         <li class="list-group-item">Release Country: {{object.country.country}}</li>
-        <li class="list-group-item">Speed: {{object.category.category_name}}</li>
-        <li class="list-group-item">Director: {{object.Director.director}}</li>
-        <li class="list-group-item">
-            Sibilings:
-            <ul class="list-group">
-                {% for sib in object.director.film_set.all %}
-                <li class="list-group-item">{{sib.director}}</li>
-                {% endfor %}
-            </ul>
+        <li class="list-group-item">Director: {{object.director.name}}</li>
+        <!-- Sibilings: -->
+        <!-- <ul class="list-group">
+            {% for sib in object.director.film_set.all %}
+            <li class="list-group-item">{{sib.name}}</li>
+            {% endfor %}
+        </ul> -->
 
         </li>
 

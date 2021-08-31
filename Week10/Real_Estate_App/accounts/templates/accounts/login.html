@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% load static %}{% block style%}
+<link rel='stylesheet' href='{% static "css/form.css" %}'> {% block content%} {% endblock %}
+
+<div class="form-body" style="background-color: #2eca6a;">
+    <div class="form-holder">
+        <div class="form-content">
+            <div class="form-items">
+                <h3>Welcome Back</h3>
+                <p>Fill in the data bellow to sign in.</p>
+                <form action="" method=POST>
+                    {% csrf_token %} {{form.as_p}}
+                    <button class="btn btn-primary">Sign In</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

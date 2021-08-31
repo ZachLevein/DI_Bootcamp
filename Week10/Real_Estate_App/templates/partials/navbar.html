@@ -1,0 +1,62 @@
+<!-- ======= Header/Navbar ======= -->
+<nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+        <a class="navbar-brand text-brand" href="{% url 'home' %}">Move<span class="color-b">Now</span></a>
+
+        <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'property_list' %}">Properties</a>
+                </li>
+
+                </button> {% if user.is_authenticated %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                </li>
+
+                {% else%}
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'login' %}" tabindex="-1">login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'signup' %}" tabindex="-1">signup</a>
+                </li>
+                {% endif %}
+        </div>
+        </li>
+
+        </ul>
+        <!-- Search Bar  -->
+        <form class="form-inline my-2 my-lg-0" method=POST action="{% url 'property_search' %}">
+            {% csrf_token %}
+            <div class="input-group ">
+
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Properties</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    </div>
+</nav>
+<!-- End Header/Navbar -->
+
+
+</div>
+</div>
+</nav>
